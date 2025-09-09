@@ -36,7 +36,11 @@
         color: $blackish;
         background-color: transparent;
 
-        @include breakpoint("XS") {
+        @include breakpoint("M") {
+            background-color: rgba($beige, 0.6);
+        }
+
+        @include breakpoint("S") {
             opacity: 0.9;
             background-color: $white;
             border-color: $white;

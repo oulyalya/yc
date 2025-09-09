@@ -1,10 +1,8 @@
-.lecture {}
-
 .lecture__container {
-    padding-top: 107px;
+    padding-top: 80px;
 
     @include breakpoint("M") {
-        padding-top: 100px;
+        padding-top: 73px;
     }
 
     @include breakpoint("S") {
@@ -16,9 +14,31 @@
     }
 }
 
-.lecture__support {
-    @include breakpoint("XS") {
-        display: block;
-        margin-bottom: 261px;
+.lecture__text {
+    position: relative;
+    padding: 27px 35% 27px 0;
+
+    @include breakpoint("S") {
+        padding: 0;
+    }
+}
+
+.lecture__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    object-fit: contain;
+    width: 100%;
+    max-width: 32.5%;
+    height: 100%;
+    object-position: right center;
+
+    @include breakpoint("S") {
+        position: static;
+        transform: none;
+        margin: 24px auto;
+        max-width: 394px;
+        height: auto;
     }
 }

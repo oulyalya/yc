@@ -26,6 +26,8 @@
 
     & th,
     & td {
+        display: flex;
+        align-items: center;
         padding-top: 15px;
         padding-bottom: 15px;
         text-align: left;

@@ -1,17 +1,22 @@
 .stages__container {
     padding-top: 162px;
+    padding-bottom: 40px;
 
     @include breakpoint("M") {
         padding-top: 140px;
     }
 
     @include breakpoint("S") {
-        padding-top: 80px;
+        padding-top: 81px;
     }
 }
 
 .stages__title {
     margin-bottom: 54px;
+
+    @include breakpoint("S") {
+        margin-bottom: 100px;
+    }
 
     @include breakpoint("XS") {
         margin-bottom: 148px;
@@ -19,6 +24,8 @@
 }
 
 .stages__slider {
+    position: relative;
+
     & .swiper-container {
         @include breakpoint("S") {
             margin-bottom: 28px;
@@ -36,6 +43,33 @@
             align-items: stretch;
             gap: 0;
         }
+    }
+}
+
+.stages__slider::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 72.35%;
+    transform: translate(0, 0.6%);
+    display: block;
+    aspect-ratio: 400/235;
+    width: 32.83%;
+    max-width: 400px;
+    background: url("../images/stages/plane.png") 100% 0 / contain no-repeat;
+
+    @include breakpoint("S") {
+        bottom: 100%;
+        left: auto;
+        right: 0;
+        transform: translate(0, 70px);
+        width: 337px;
+    }
+
+    @include breakpoint("XS") {
+        left: 50%;
+        transform: translate(-46.5%, 66px) rotate(-3.6deg);
     }
 }
 
@@ -58,13 +92,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    &--4 {
-        background-color: $grey-2;
-    }
-
     &--5 {
         grid-column: span 2;
-        background-color: $grey-2;
     }
 
     @include breakpoint("S") {
@@ -73,19 +102,51 @@
         height: auto;
         padding: 62px 0 34px;
         line-height: 1.22;
-        background-color: $grey-2;
+        background: url("../images/stages/slide_bg.jpg") 0 0 / 835px auto no-repeat;
+        background-color: $beige;
     }
 }
 
 .stages__item {
     position: relative;
-    max-width: 538px;
     padding: 20px 20px 20px 72px;
     font-weight: 600;
+    background: url("../images/stages/bg_7.jpg") 0 0 / cover no-repeat;
+    background-color: $beige;
     counter-increment: stages_counter;
 
     @include breakpoint("S") {
         padding: 0 24px 0 72px;
+        background: none;
+    }
+
+    &--1 {
+        background-image: url("../images/stages/bg_1.jpg");
+    }
+
+    &--2 {
+        background-image: url("../images/stages/bg_2.jpg");
+    }
+
+    &--3 {
+        background-image: url("../images/stages/bg_3.jpg");
+    }
+
+    &--4 {
+        background-image: url("../images/stages/bg_4.jpg");
+    }
+
+    &--5 {
+        background-image: url("../images/stages/bg_5.jpg");
+    }
+
+    &--6 {
+        background-image: url("../images/stages/bg_6.jpg");
+    }
+
+    &--7 {
+        padding-right: 40%;
+        background-image: url("../images/stages/bg_7.jpg");
     }
 
     &::before {
@@ -99,7 +160,6 @@
         aspect-ratio: 1/1;
         width: 36px;
         font-weight: 700;
-        background: url("") 50% 50% / contain no-repeat;
         background-color: $white;
         border-radius: 50%;
 

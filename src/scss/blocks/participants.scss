@@ -1,15 +1,15 @@
 .participants__container {
     position: relative;
-    padding-top: 200px;
+    padding-top: 160px;
     padding-bottom: 138px;
 
     @include breakpoint("M") {
-        padding-top: 180px;
+        padding-top: 140px;
         padding-bottom: 120px;
     }
 
     @include breakpoint("S") {
-        padding-top: 122px;
+        padding-top: 82px;
         padding-bottom: 100px;
     }
 }
@@ -43,7 +43,7 @@
 .participants__controls {
     position: absolute;
     bottom: calc(100% + 71px);
-    right: $pad-l;
+    right: 0;
 
     @include breakpoint("S") {
         position: static;

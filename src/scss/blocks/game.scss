@@ -2,16 +2,15 @@
     display: flex;
     align-items: flex-start;
     gap: 44px;
-    padding-top: 91px;
+    padding-top: 64px;
     padding-bottom: 40px;
 
     @include breakpoint("S") {
-        gap: 30px;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     @include breakpoint("XS") {
-        flex-wrap: wrap;
-        gap: 20px;
         padding-top: 21px;
     }
 }
@@ -24,28 +23,12 @@
     max-width: 473px;
 
     @include breakpoint("S") {
-        width: 30%;
-    }
-
-    @include breakpoint("XS") {
         width: 100%;
+        margin: 0 auto;
     }
 }
 
-.game__note {
-    width: 26%;
-    margin-top: 22px;
-    margin-left: auto;
-
-    @include breakpoint("XS") {
-        position: absolute;
-        top: 6.2%;
-        right: 0;
-        width: 25.65%;
-    }
-}
-
-.game__shape {
+.game__player {
     position: absolute;
     top: 0;
     left: 50%;
@@ -63,10 +46,6 @@
     position: relative;
     z-index: 2;
     flex-grow: 1;
-
-    @include breakpoint("S") {
-        max-width: 540px;
-    }
 }
 
 .game__text {

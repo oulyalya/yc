@@ -40,8 +40,11 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header__circle">
-                <img src="./images/header/motto.svg" width="660" height="660" alt="Надпись Из Васюков полетят сигналы на Марс">
+            <div class="header__img">
+                <picture>
+                    <source media="(max-width: 699px)" srcset="./images/header/bg_xs.jpg">
+                    <img src="./images/header/bg.jpg" width="1920" height="700" alt="Коллаж с шахматной доской, городскими зданиями и фигурами">
+                </picture>
             </div>
         </div>
         <div class="header__marquee marquee">
@@ -58,10 +61,11 @@
         <section class="lecture" id="lecture">
             <div class="lecture__container container pads">
                 <p class="lecture__text title title--h3">
-                    <span class="lecture__support">
+                    <span>
                         Чтобы поддержать<br> Международный васюкинский
                         <br> турнир
                     </span>
+                    <img class="lecture__img" src="./images/lecture/img.png" width="394" height="250" alt="Шахматисты за столом">
                     <span>
                         посетите лекцию на&#160;тему:<br>
                     </span>
@@ -74,11 +78,7 @@
         <section class="game" id="game">
             <div class="game__container container pads">
                 <div class="game__img">
-                    <img class="game__note" src="./images/game/note.jpg" width="122" height="241" alt="Купюра 1000 рублей">
-                    <picture>
-                        <source media="(max-width: 699px)" srcset="./images/game/shape_xs.svg">
-                        <img class="game__shape" src="./images/game/shape.svg" width="530" height="609" alt="Абстрактная форма">
-                    </picture>
+                    <img class="game__player" src="./images/game/player.jpg" width="527" height="609" alt="Коллаж с шахматистом">
                 </div>
                 <div class="game__content">
                     <h2 class="game__text title title--h3">
@@ -128,42 +128,46 @@
                     <div class="swiper-container">
                         <div class="stages__items swiper-wrapper">
                             <div class="stages__slide stages__slide--1 swiper-slide">
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--1">
                                     Строительство железнодорожной магистрали Москва-Васюки
                                 </div>
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--2">
                                     Открытие фешенебельной гостиницы «Проходная пешка» и&#160;других небоскрёбов
                                 </div>
                             </div>
                             <div class="stages__slide stages__slide--2 swiper-slide">
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--3">
                                     Поднятие сельского хозяйства в&#160;радиусе на&#160;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
                                 </div>
                             </div>
                             <div class="stages__slide stages__slide--3 swiper-slide">
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--4">
                                     Строительство дворца для&#160;турнира
                                 </div>
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--5">
                                     Размещение гаражей для&#160;гостевого автотранспорта
                                 </div>
                             </div>
                             <div class="stages__slide stages__slide--4 swiper-slide">
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--6">
                                     Постройка сверхмощной радиостанции для&#160;передачи всему миру сенсационных результатов
                                 </div>
                             </div>
                             <div class="stages__slide stages__slide--5 swiper-slide">
-                                <div class="stages__item">
+                                <div class="stages__item stages__item--7">
                                     Создание аэропорта «Большие Васюки» с&#160;регулярным отправлением почтовых самолётов и&#160;дирижаблей во&#160;все концы света, включая Лос-Анжелос и&#160;Мельбурн
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="stages__scontrols controls">
-                        <button class="arrow arrow--prev"></button>
+                        <button class="arrow arrow--prev">
+                            <span class="hidden">Предыдущий слайд</span>
+                        </button>
                         <div class="pagination"></div>
-                        <button class="arrow arrow--next"></button>
+                        <button class="arrow arrow--next">
+                            <span class="hidden">Слеюущий слайд</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -178,7 +182,7 @@
                         <div class="swiper-wrapper">
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Хозе-Рауль Капабланка</h4>
@@ -188,7 +192,7 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Эммануил Ласкер</h4>
@@ -198,7 +202,7 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Александр Алехин</h4>
@@ -208,7 +212,7 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Арон Нимцович</h4>
@@ -218,7 +222,7 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Рихард Рети</h4>
@@ -228,7 +232,7 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="card__img">
-                                    <img src="./images/participants/image.svg" width="320" height="320" alt="Фотография участника">
+                                    <img src="./images/participants/image.jpg" width="320" height="320" alt="Фотография участника">
                                 </div>
                                 <div class="card__content">
                                     <h4 class="card__name">Остап Бендер</h4>
@@ -239,9 +243,13 @@
                         </div>
                     </div>
                     <div class="participants__controls controls">
-                        <button class="arrow arrow--prev"></button>
+                        <button class="arrow arrow--prev">
+                            <span class="hidden">Предыдущий слайд</span>
+                        </button>
                         <div class="pagination pagination--fraction"></div>
-                        <button class="arrow arrow--next"></button>
+                        <button class="arrow arrow--next">
+                            <span class="hidden">Слеюущий слайд</span>
+                        </button>
                     </div>
                 </div>
             </div>

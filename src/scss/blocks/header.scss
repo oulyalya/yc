@@ -18,7 +18,7 @@
 
     @include breakpoint("XS") {
         padding-top: 18px;
-        padding-bottom: 47px;
+        padding-bottom: 291px;
     }
 }
 
@@ -114,27 +114,20 @@
     }
 }
 
-.header__circle {
+.header__img {
     position: absolute;
-    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
-    transform: translate(-5%, -6.8%);
-    width: 48.35%;
-    background-color: $yellow;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
-    @include breakpoint("M") {
-        transform: translate(0, -6.8%);
-    }
-
-    @include breakpoint("XS") {
-        position: static;
-        width: auto;
-        margin: -55px 27px 0 10px;
-    }
-
+    & picture,
     & img {
-        animation: rotate 40s linear infinite;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 100%;
     }
 }
