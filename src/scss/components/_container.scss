@@ -1,0 +1,6 @@
+.container {
+    max-width: map-get($containerWidth, 'L');
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 16px;
+}

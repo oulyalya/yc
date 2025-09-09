@@ -1,0 +1,54 @@
+.marquee__line {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 0.75em 0 0.65em;
+    color: $white;
+    font-size: 22px;
+    line-height: 1.1;
+    white-space: nowrap;
+    background-color: $red;
+
+    @include breakpoint("M") {
+        font-size: 20px;
+    }
+
+    @include breakpoint("S") {
+        padding: 0.625em 0 0.625em;
+        font-size: 18px;
+    }
+
+    @include breakpoint("XS") {
+        font-size: 16px;
+    }
+}
+
+.marquee__item {
+    display: flex;
+    transform: translateX(-100%);
+    animation: no-transform 60s linear reverse infinite;
+}
+
+.marquee__slogan {
+    display: flex;
+    align-items: center;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+
+    &::after {
+        content: "";
+        display: block;
+        margin: 0 12px;
+        aspect-ratio: 1/1;
+        width: 6px;
+        border-radius: 50%;
+        background-color: currentColor;
+    }
+}
+
+@keyframes no-transform {
+    100% {
+        transform: none;
+    }
+}

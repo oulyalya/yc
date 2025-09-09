@@ -1,0 +1,16 @@
+/// Если требуется работать с обычным CSS, а не SCSS, то
+/// следует полностью заменить содержимое этого файла на CSS
+
+@import "global/mixins";
+@import "global/fonts";
+@import "global/variables";
+@import "global/functions";
+@import "global/base";
+@import "global/normalize";
+@import "global/keyframes";
+@import "global/utils";
+
+@import "libs/swiper";
+
+@import "style";
+// @import "responsive";

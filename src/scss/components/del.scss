@@ -1,0 +1,10 @@
+.del {
+    display: inline-block;
+    margin-top: 0.1em;
+    margin-right: 0.32em;
+    text-decoration-line: line-through;
+    text-decoration-color: $red;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    // text-underline-offset: -0.5em;
+}

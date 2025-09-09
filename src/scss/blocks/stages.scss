@@ -1,0 +1,118 @@
+.stages__container {
+    padding-top: 162px;
+
+    @include breakpoint("M") {
+        padding-top: 140px;
+    }
+
+    @include breakpoint("S") {
+        padding-top: 80px;
+    }
+}
+
+.stages__title {
+    margin-bottom: 54px;
+
+    @include breakpoint("XS") {
+        margin-bottom: 148px;
+    }
+}
+
+.stages__slider {
+    & .swiper-container {
+        @include breakpoint("S") {
+            margin-bottom: 28px;
+        }
+    }
+
+    & .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        counter-reset: stages_counter;
+
+        @include breakpoint("S") {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+        }
+    }
+}
+
+.stages__slide {
+    display: grid;
+    width: auto;
+    gap: inherit;
+
+    &--1 {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--2 {
+        grid-row: span 2;
+    }
+
+    &--3 {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--4 {
+        background-color: $grey-2;
+    }
+
+    &--5 {
+        grid-column: span 2;
+        background-color: $grey-2;
+    }
+
+    @include breakpoint("S") {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        height: auto;
+        padding: 62px 0 34px;
+        line-height: 1.22;
+        background-color: $grey-2;
+    }
+}
+
+.stages__item {
+    position: relative;
+    max-width: 538px;
+    padding: 20px 20px 20px 72px;
+    font-weight: 600;
+    counter-increment: stages_counter;
+
+    @include breakpoint("S") {
+        padding: 0 24px 0 72px;
+    }
+
+    &::before {
+        content: counter(stages_counter);
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        width: 36px;
+        font-weight: 700;
+        background: url("") 50% 50% / contain no-repeat;
+        background-color: $white;
+        border-radius: 50%;
+
+        @include breakpoint("S") {
+            top: 0;
+        }
+    }
+}
+
+.stages__scontrols {
+    display: none;
+
+    @include breakpoint("S") {
+        display: flex;
+    }
+}

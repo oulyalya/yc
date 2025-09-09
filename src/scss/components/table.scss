@@ -1,0 +1,71 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 0 none;
+}
+
+.table tr {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    border-bottom: 2px solid $grey;
+
+    @include breakpoint("S") {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 0;
+    }
+
+    &:last-child {
+        border-bottom: 0 none;
+    }
+}
+
+.table {
+
+    & th,
+    & td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: left;
+
+        @include breakpoint("S") {
+            display: inline-block;
+            padding: 0;
+        }
+    }
+}
+
+.table tr:first-of-type {
+
+    & th,
+    & td {
+        padding-top: 0;
+    }
+}
+
+.table tr:last-of-type {
+
+    & th,
+    & td {
+        padding-bottom: 0;
+    }
+}
+
+.table th {
+    padding-right: 16px;
+    font-weight: 400;
+    color: $text-color-07;
+    border-right: 2px solid;
+    border-color: $grey;
+
+    @include breakpoint("S") {
+        border-right: 0 none;
+    }
+}
+
+.table td {
+    padding-left: 16px;
+    font-weight: 700;
+}

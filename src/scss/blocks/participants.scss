@@ -1,0 +1,51 @@
+.participants__container {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 138px;
+
+    @include breakpoint("M") {
+        padding-top: 180px;
+        padding-bottom: 120px;
+    }
+
+    @include breakpoint("S") {
+        padding-top: 122px;
+        padding-bottom: 100px;
+    }
+}
+
+.participants__title {
+    max-width: calc(100% - 200px);
+    margin-bottom: 58px;
+
+    @include breakpoint("S") {
+        max-width: none;
+        margin-bottom: 40px;
+    }
+}
+
+.participants__slider {
+    position: relative;
+
+    & .swiper-wrapper {
+        align-items: stretch;
+
+        @include breakpoint("S") {
+            margin-bottom: 40px;
+        }
+    }
+
+    & .swiper-slide {
+        height: auto;
+    }
+}
+
+.participants__controls {
+    position: absolute;
+    bottom: calc(100% + 71px);
+    right: $pad-l;
+
+    @include breakpoint("S") {
+        position: static;
+    }
+}

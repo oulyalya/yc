@@ -1,0 +1,10 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @include breakpoint("XS") {
+        gap: 14px;
+    }
+}

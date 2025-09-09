@@ -1,0 +1,46 @@
+@import "../mixins/breakpoints";
+
+@mixin flex($align: flex-start, $space: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $align;
+    justify-content: $space;
+}
+
+@mixin retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-resolution: 1.5dppx),
+    only screen and (min-resolution: 144dpi) {
+        @content;
+    }
+}
+
+@mixin pads {
+    padding-left: $pad-l;
+    padding-right: $pad-l;
+
+    @include breakpoint("M") {
+        padding-left: $pad-m;
+        padding-right: $pad-m;
+    }
+
+    @include breakpoint("S") {
+        padding-left: $pad-s;
+        padding-right: $pad-s;
+    }
+
+    @include breakpoint("XS") {
+        padding-left: $pad-xs;
+        padding-right: $pad-xs;
+    }
+}
+
+@mixin title {
+
+}
+
+@mixin caption {
+
+}

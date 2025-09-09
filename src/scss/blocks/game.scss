@@ -1,0 +1,92 @@
+.game__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 44px;
+    padding-top: 91px;
+    padding-bottom: 40px;
+
+    @include breakpoint("S") {
+        gap: 30px;
+    }
+
+    @include breakpoint("XS") {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 21px;
+    }
+}
+
+.game__img {
+    position: relative;
+    flex-shrink: 0;
+    aspect-ratio: 473/527;
+    width: 38.75%;
+    max-width: 473px;
+
+    @include breakpoint("S") {
+        width: 30%;
+    }
+
+    @include breakpoint("XS") {
+        width: 100%;
+    }
+}
+
+.game__note {
+    width: 26%;
+    margin-top: 22px;
+    margin-left: auto;
+
+    @include breakpoint("XS") {
+        position: absolute;
+        top: 6.2%;
+        right: 0;
+        width: 25.65%;
+    }
+}
+
+.game__shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -7.6%);
+    width: 111.81%;
+    max-width: none;
+
+    @include breakpoint("XS") {
+        position: relative;
+        transform: translate(-50%, 0);
+    }
+}
+
+.game__content {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+
+    @include breakpoint("S") {
+        max-width: 540px;
+    }
+}
+
+.game__text {
+    margin-bottom: 60px;
+
+    @include breakpoint("S") {
+        margin-bottom: 28px;
+    }
+}
+
+.game__table {
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include breakpoint("S") {
+        margin-bottom: 23px;
+    }
+}
+
+.game__fn {
+    color: $blue;
+}

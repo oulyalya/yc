@@ -1,0 +1,88 @@
+.title {
+    font-family: $font-secondary;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--h1 {
+        font-size: 60px;
+        line-height: 1.1;
+
+        @include breakpoint("M") {
+            font-size: 54px;
+        }
+
+        @include breakpoint("S") {
+            font-size: 48px;
+        }
+
+        @include breakpoint("XS") {
+            font-size: 36px;
+            line-height: 1.11;
+        }
+    }
+
+    &--h2 {
+        font-size: 54px;
+        line-height: 1.2;
+
+        @include breakpoint("M") {
+            font-size: 48px;
+        }
+
+        @include breakpoint("S") {
+            font-size: 40px;
+            line-height: 1.1;
+        }
+
+        @include breakpoint("XS") {
+            font-size: 36px;
+        }
+
+        @include breakpoint("XXS") {
+            font-size: 30px;
+        }
+    }
+
+    &--h3 {
+        font-size: 36px;
+        line-height: 1.36;
+
+        @include breakpoint("M") {
+            font-size: 33px;
+        }
+
+        @include breakpoint("S") {
+            font-size: 30px;
+        }
+
+        @include breakpoint("XS") {
+            font-size: 28px;
+        }
+    }
+}
+
+.title__small {
+    display: inline-block;
+    margin-left: 0.22em;
+    font-family: $font-main;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $blue;
+    text-transform: none;
+
+    @include breakpoint("S") {
+        font-size: 18px;
+    }
+
+    @include breakpoint("XS") {
+        display: block;
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+    & br {
+        @include breakpoint("XS") {
+            display: none;
+        }
+    }
+}

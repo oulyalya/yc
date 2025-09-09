@@ -1,0 +1,52 @@
+.arrow {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    width: 44px;
+    background-color: $text-color;
+    transition:
+        background-color 0.3s ease-in-out,
+        opacity 0.2s ease-in-out;
+    border-radius: 50%;
+    border: 0 none;
+
+    @include breakpoint("S") {
+        width: 36px;
+        height: 36px;
+    }
+
+    &:hover {
+        background-color: $yellow;
+    }
+
+    &--disabled,
+    &--disabled:hover {
+        cursor: auto;
+        pointer-events: none;
+        background-color: #D6D6D6;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("../images/arrow/arrow.svg") 50% 50% / contain no-repeat;
+        border-radius: inherit;
+        transition: 0.3s ease-in;
+        transition-property: opacity;
+    }
+
+    &:active::after {
+        opacity: 0.4;
+    }
+
+    &--prev::after {
+        transform: scaleX(-1);
+    }
+}

@@ -1,0 +1,140 @@
+.header {
+    background-color: $beige;
+    overflow: hidden;
+}
+
+.header__container {
+    position: relative;
+    padding-top: 26px;
+    padding-bottom: 130px;
+
+    @include breakpoint("M") {
+        padding-bottom: 110px;
+    }
+
+    @include breakpoint("S") {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint("XS") {
+        padding-top: 18px;
+        padding-bottom: 47px;
+    }
+}
+
+.header__content {
+    position: relative;
+    z-index: 2;
+    max-width: 542px;
+    width: max-content;
+
+    @include breakpoint("S") {
+        max-width: 450px;
+    }
+
+    @include breakpoint("XS") {
+        width: auto;
+    }
+}
+
+.header__logo {
+    width: 246px;
+    margin-bottom: 62px;
+
+    @include breakpoint("S") {
+        width: 213px;
+        margin-bottom: 42px;
+    }
+}
+
+.header__title {
+    margin-bottom: 24px;
+
+    @include breakpoint("XS") {
+        margin-bottom: 22px;
+    }
+
+    & span {
+        display: block;
+        width: 100%;
+    }
+
+    & span:nth-child(2) {
+        text-align: center;
+
+        @include breakpoint("XS") {
+            transform: translateX(4px);
+        }
+    }
+
+    & span:nth-child(3) {
+        text-align: right;
+    }
+}
+
+.header__caption {
+    margin-bottom: 39px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+
+    @include breakpoint("S") {
+        margin-bottom: 32px;
+        text-align: left;
+    }
+}
+
+.header__nav ul {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+
+    @include breakpoint("S") {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
+
+.header__nav li {
+    flex-grow: 1;
+    width: calc(50% - 8px);
+
+    @include breakpoint("S") {
+        width: 100%;
+    }
+}
+
+.header__btn {
+    width: 100%;
+
+    & br {
+        @include breakpoint("S") {
+            display: none;
+        }
+    }
+}
+
+.header__circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-5%, -6.8%);
+    width: 48.35%;
+    background-color: $yellow;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include breakpoint("M") {
+        transform: translate(0, -6.8%);
+    }
+
+    @include breakpoint("XS") {
+        position: static;
+        width: auto;
+        margin: -55px 27px 0 10px;
+    }
+
+    & img {
+        animation: rotate 40s linear infinite;
+    }
+}
